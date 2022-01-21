@@ -25,6 +25,7 @@ module "example" {
   subnet_id   = azurerm_subnet.example.id
   resource_group = azurerm_resource_group.example.name
   custom_data = base64encode(data.template_file.init.rendered)
+  #custom_data = data.template_cloudinit_config.custom_data
   environment = "dev"
   public_key  = file("~/.ssh/id_rsa.pub")
 

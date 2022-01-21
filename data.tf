@@ -8,3 +8,9 @@ data "azurerm_platform_image" "selected" {
   offer     = element(split(",", var.image),1)
   sku       = element(split(",", var.image),2)
 }
+
+## https://github.com/hashicorp/terraform-provider-azurerm/issues/12794
+#data "azurerm_ssh_public_key" "selected" {
+#  name                = "azure-terraform"
+#  resource_group_name = "azurerm"
+#}
