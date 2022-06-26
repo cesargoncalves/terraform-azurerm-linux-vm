@@ -7,7 +7,8 @@ variable "image" {
 }
 
 variable "environment" {
-  type = string
+  type    = string
+  default = "dev"
 }
 
 variable "resource_group" {
